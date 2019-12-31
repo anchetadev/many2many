@@ -1,0 +1,11 @@
+<h1>Hi, <%= current_user.name %>!</h1>
+<form method="POST" action="/idea">
+<input type = 'hidden' name = "authenticity_token" value = "<%=form_authenticity_token%>">
+<input type="text" name="idea" placeholder="Post something witty here...">
+<input type="submit" value="Idea">
+</form>
+<%@idea.each do |i|%>
+<h3><a href ="/users/<%=i.id%>"><%=i.user.username%> </a>says: <%=i.idea%></h3>
+<a href= "/idea/<%=i.id%>">Like</a>
+<a href = "/bright_ideas/<%=i.id%>"><%=i.likes.length%>people like this</a>
+<%end%>

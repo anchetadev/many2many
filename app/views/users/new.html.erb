@@ -1,0 +1,23 @@
+<form method="POST" action='/users'>
+<h1>Register</h1>
+<input type = 'hidden' name = "authenticity_token" value = "<%=form_authenticity_token%>">
+Email: <input type="text" name="Email">
+<br>
+Name: <input type="text" name="Name">
+<br>
+Username: <input type="text" name="Username">
+<br>
+Password: <input type="text" name="Password">
+<br>
+Password confirmation: <input type="text" name="Password_Confirmation">
+<br>
+<input type="submit" value="Join">
+</form>
+<form method="POST" action="/sessions/new">
+<input type = 'hidden' name = "authenticity_token" value = "<%=form_authenticity_token%>">
+Email: <input type="text" name="l_Email">
+<br>
+Password: <input type="text" name="l_Password">
+<br>
+<input type="submit" value="Log In">
+</form>

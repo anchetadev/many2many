@@ -1,0 +1,15 @@
+<a href = "/bright_ideas">Bright Ideas</a>
+<h1><%=@idea.user.username%> says: <%=@idea.idea%></h1>
+<h3>People who liked this post</h3>
+<table>
+    <tr>
+        <th>Alias</th>
+        <th>Name</th>
+    <tr>
+    <%@likes.each do |l|%>
+    <tr>
+        <td><%=l.username%></td>
+        <td><%=l.name%></td>
+    </tr>
+    <%end%>
+</table>
